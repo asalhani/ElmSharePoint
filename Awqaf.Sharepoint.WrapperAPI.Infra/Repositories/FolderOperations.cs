@@ -21,7 +21,7 @@ namespace Awqaf.Sharepoint.WrapperAPI.Infra.Repositories
 
         public async Task<Folder> GetFoldersWithCreation(string folderPath)
         {
-            Folder folder = getServices();
+            Folder folder = await getServices();
             List<string> folderLevels = folderPath.Split('/').AsEnumerable().Where(x => x != "" & x != " ").ToList();
 
 
@@ -39,13 +39,13 @@ namespace Awqaf.Sharepoint.WrapperAPI.Infra.Repositories
 
 
         //get folder for eservices
-        public Folder getServices()
+        public async Task<Folder> getServices()
         {
             string serviceFolder = ConfigurationManager.AppSettings["Services"];
             //get Eservices
             Folder folder = _list.RootFolder.Folders.GetByUrl(_list.RootFolder.ServerRelativeUrl + "/" + serviceFolder);
             _clientContext.Load(folder);
-            _clientContext.ExecuteQuery();
+            await _clientContext.ExecuteQueryAsync();
 
             return folder;
 
@@ -57,7 +57,7 @@ namespace Awqaf.Sharepoint.WrapperAPI.Infra.Repositories
         {
             Folder folderCreated = folder.Folders.Add(name);
             _clientContext.Load(folderCreated);
-            _clientContext.ExecuteQuery();
+            await _clientContext.ExecuteQueryAsync();
             return folderCreated;
         }
 
@@ -78,19 +78,17 @@ namespace Awqaf.Sharepoint.WrapperAPI.Infra.Repositories
 
                 ListItemCollection listItems = _list.GetItems(camlQuery);
                 _clientContext.Load(listItems);
-                _clientContext.ExecuteQuery();
+                await _clientContext.ExecuteQueryAsync();
 
 
                 if (listItems.Count == 0)
                 {
                     Folder folderCreated = folder.Folders.Add(folderName);
                     _clientContext.Load(folderCreated);
-                    _clientContext.ExecuteQuery();
+                    await _clientContext.ExecuteQueryAsync();
                     return folderCreated;
                 }
                 Folder folderFounded = listItems.FirstOrDefault().Folder;
-                //_clientContext.Load(folderFounded);
-                //_clientContext.ExecuteQuery();
                 return folderFounded;
             }
             return null;

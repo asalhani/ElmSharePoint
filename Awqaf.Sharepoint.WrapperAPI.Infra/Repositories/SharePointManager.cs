@@ -31,7 +31,7 @@ namespace Awqaf.Sharepoint.WrapperAPI.Infra.Repositories
             string listName = ConfigurationManager.AppSettings["DMSListName"];
             List _list = web.Lists.GetByTitle(listName);
             _clientContext.Load(_list, f => f.RootFolder.ServerRelativeUrl, f => f.ItemCount);
-            _clientContext.ExecuteQuery();
+            await _clientContext.ExecuteQueryAsync();
             return _list;
         }
 

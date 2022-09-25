@@ -4,6 +4,7 @@ using Microsoft.SharePoint.Client;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,40 +21,46 @@ namespace Awqaf.Sharepoint.WrapperAPI.Infra.Repositories
             _clientContext = clientContext;
         }
 
-        public async Task<byte[]> GetFile(string fileUrl)
+        public byte[] GetFile(string fileUrl)
         {
-            var fileInfo = File.OpenBinaryDirect(_clientContext, fileUrl);
-            var stream = fileInfo.Stream;
-            IList<byte> content = new List<byte>();
-            int b;
-            while ((b = fileInfo.Stream.ReadByte()) != -1)
+            var fileInfo = Microsoft.SharePoint.Client.File.OpenBinaryDirect(_clientContext, fileUrl);
+            if (fileInfo != null)
             {
-                content.Add((byte)b);
+                using (var stream = fileInfo.Stream)
+                {
+                    using (MemoryStream memoryStream = new MemoryStream())
+                    {
+                        stream.CopyTo(memoryStream);
+                        byte[] barray = memoryStream.ToArray();
+                        return barray;
+                    }
+                }
             }
-            byte[] barray = content.ToArray();
-            return barray;
-
+            else
+            {
+                return null;
+            }
 
         }
 
         public async Task<string> UploadFileToDocLibrary(FileProperties fileProperties, Folder folder)
         {
-            
-                var fileCreationInformation = new FileCreationInformation();
-                fileCreationInformation.Content = fileProperties.FileContent;
-                //Allow owerwrite of document
 
-                fileCreationInformation.Overwrite = true;
-                //Upload URL
+            var fileCreationInformation = new FileCreationInformation();
+            fileCreationInformation.Content = fileProperties.FileContent;
+            //Allow owerwrite of document
 
-                fileCreationInformation.Url = fileProperties.FileName;
+            fileCreationInformation.Overwrite = true;
+            //Upload URL
 
-                Microsoft.SharePoint.Client.File uploadFile = folder.Files.Add(fileCreationInformation);
+            fileCreationInformation.Url = fileProperties.FileName;
 
-                _clientContext.Load(uploadFile, f => f.ServerRelativeUrl);
-                _clientContext.ExecuteQuery();
-                return uploadFile.ServerRelativeUrl;
-            
+            Microsoft.SharePoint.Client.File uploadFile = folder.Files.Add(fileCreationInformation);
+
+            _clientContext.Load(uploadFile, f => f.ServerRelativeUrl);
+            await _clientContext.ExecuteQueryAsync();
+            return uploadFile.ServerRelativeUrl;
+
 
         }
     }

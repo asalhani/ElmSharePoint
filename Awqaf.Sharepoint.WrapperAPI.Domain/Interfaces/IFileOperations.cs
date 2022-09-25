@@ -11,6 +11,6 @@ namespace Awqaf.Sharepoint.WrapperAPI.Domain.Interfaces
     public interface IFileOperations
     {
         Task<string> UploadFileToDocLibrary(FileProperties fileProperties, Folder folder);
-        Task<byte[]> GetFile(string fileUrl);
+        byte[] GetFile(string fileUrl);
     }
 }

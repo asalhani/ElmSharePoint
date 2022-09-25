@@ -11,3 +11,16 @@ C:\Users\Administrator\source\repos\ElmSharePoint\Awqaf.Sharepoint.WrapperAPI.In
 C:\Users\Administrator\source\repos\ElmSharePoint\Awqaf.Sharepoint.WrapperAPI.Infra\obj\Debug\Awqaf.Sharepoint.WrapperAPI.Infra.csproj.CopyComplete
 C:\Users\Administrator\source\repos\ElmSharePoint\Awqaf.Sharepoint.WrapperAPI.Infra\obj\Debug\Awqaf.Sharepoint.WrapperAPI.Infra.dll
 C:\Users\Administrator\source\repos\ElmSharePoint\Awqaf.Sharepoint.WrapperAPI.Infra\obj\Debug\Awqaf.Sharepoint.WrapperAPI.Infra.pdb
+C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Infra\bin\Debug\Awqaf.Sharepoint.WrapperAPI.Infra.dll
+C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Infra\bin\Debug\Awqaf.Sharepoint.WrapperAPI.Infra.pdb
+C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Infra\bin\Debug\Awqaf.Sharepoint.WrapperAPI.Domain.dll
+C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Infra\bin\Debug\Microsoft.SharePoint.Client.dll
+C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Infra\bin\Debug\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Infra\bin\Debug\Awqaf.Sharepoint.WrapperAPI.Domain.pdb
+C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Infra\bin\Debug\Microsoft.SharePoint.Client.xml
+C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Infra\bin\Debug\Microsoft.SharePoint.Client.Runtime.xml
+C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Infra\obj\Debug\Awqaf.Sharepoint.WrapperAPI.Infra.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Infra\obj\Debug\Awqaf.Sharepoint.WrapperAPI.Infra.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Infra\obj\Debug\Awqaf.Sharepoint.WrapperAPI.Infra.csproj.CopyComplete
+C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Infra\obj\Debug\Awqaf.Sharepoint.WrapperAPI.Infra.dll
+C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Infra\obj\Debug\Awqaf.Sharepoint.WrapperAPI.Infra.pdb
