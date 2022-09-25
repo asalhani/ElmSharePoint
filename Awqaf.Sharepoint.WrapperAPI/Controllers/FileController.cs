@@ -44,6 +44,7 @@ namespace Awqaf.Sharepoint.WrapperAPI.Controllers
                         },
                         isSuccess = true
                     };
+                    context.Dispose();
                     return result;
                 }
                 else
@@ -107,7 +108,7 @@ namespace Awqaf.Sharepoint.WrapperAPI.Controllers
                     },
                     isSuccess = true
                 };
-
+                context.Dispose();
                 return result;
 
             }
