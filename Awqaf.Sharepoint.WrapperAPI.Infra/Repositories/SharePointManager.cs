@@ -15,13 +15,16 @@ namespace Awqaf.Sharepoint.WrapperAPI.Infra.Repositories
         private ClientContext _clientContext;
         public async Task<ClientContext> GetClientContext()
         {
-            ClientContext clientContext = new ClientContext(ConfigurationManager.AppSettings["DMSUrl"])
+           using( ClientContext clientContext = new ClientContext(ConfigurationManager.AppSettings["DMSUrl"])
             {
                 Credentials = new NetworkCredential(ConfigurationManager.AppSettings["DMSUserName"],
                ConfigurationManager.AppSettings["DMSPassword"], ConfigurationManager.AppSettings["DMSDomain"])
-            };
-            _clientContext = clientContext;
-            return clientContext;
+           })
+            {
+                _clientContext = clientContext;
+                return clientContext;
+            }
+            
         }
 
 

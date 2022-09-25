@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awqaf.Sharepoint.WrapperAPI.API", "Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.API.csproj", "{F1DD7A50-8311-4D6F-97B3-266BF0A3B0D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awqaf.Sharepoint.WrapperAPI.API", "Awqaf.Sharepoint.WrapperAPI.API\Awqaf.Sharepoint.WrapperAPI.API.csproj", "{F1DD7A50-8311-4D6F-97B3-266BF0A3B0D8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{DCA4E8C1-B6C5-4300-B59E-4A25A784A7FB}"
 EndProject

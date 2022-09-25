@@ -14,7 +14,6 @@ C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint
 C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Domain\bin\Debug\Microsoft.SharePoint.Client.Runtime.dll
 C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Domain\bin\Debug\Microsoft.SharePoint.Client.xml
 C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Domain\bin\Debug\Microsoft.SharePoint.Client.Runtime.xml
-C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Domain\obj\Debug\Awqaf.Sharepoint.WrapperAPI.Domain.csproj.AssemblyReference.cache
 C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Domain\obj\Debug\Awqaf.Sharepoint.WrapperAPI.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Domain\obj\Debug\Awqaf.Sharepoint.WrapperAPI.Domain.csproj.CopyComplete
 C:\Users\Administrator\source\repos\Awqaf.Sharepoint.WrapperAPI\Awqaf.Sharepoint.WrapperAPI.Domain\obj\Debug\Awqaf.Sharepoint.WrapperAPI.Domain.dll
