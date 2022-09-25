@@ -1,0 +1,59 @@
+- rename [ElmSharePoint] folder to [Awqaf.Sharepoint.WrapperAPI.API]
+
+- upgrade .net framework version to 4.8 (unless if it's causes issues with sharepoint dll then please let me know to discuss it)
+
+- for all the api (upload/download) please retrun the result as per below structure:
+
+success:
+
+{
+    "data": {
+        "dateOfBirthG": "1980-09-14T00:00:00",
+        "englishFirstName": "ahmed",
+        "englishLastName": "ali"
+    },
+    "isSuccess": true
+}
+
+Error:
+
+{
+    "data": [
+        {
+            "code": "ValidationError",
+            "message": "The field Iqama must match the regular expression '^2[0-9]{9}$'.",
+            "errorData": "Iqama"
+        }
+    ],
+    "isSuccess": false
+}
+
+*---------------------------------
+
+
+FolderOperations().GetFolderByName(). 
+	==> Use Async version and Await result:  _clientContext.ExecuteQuery();
+	==> check for null :   Folder folderFounded = listItems.FirstOrDefault().Folder;
+
+FileOperations()
+	==> UploadFileToDocLibrary()
+		==>  Use Async version and Await result:   _clientContext.ExecuteQuery();
+
+	==> GetFile()
+		==> Since there is no async operation, then remove "async" from function singniture
+		==> Wrap stream with using() block to dispose memory 
+		==> check for null refernce cases
+		==> to avoid performance issue, check if there is a way to read stream without using while loop.
+			 while ((b = fileInfo.Stream.ReadByte()) != -1)
+            {
+                content.Add((byte)b);
+            }
+			
+			
+-------------------------------
+
+Provide postman collection that shows how to call both APIs (UploadFile, GetFile)
+
+
+
+
