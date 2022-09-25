@@ -1,0 +1,27 @@
+Download and install following;
+
+	Net core 6
+	https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-6.0.401-windows-x64-installer
+
+	Net Framework 4.8
+	https://dotnet.microsoft.com/en-us/download/dotnet-framework/thank-you/net48-developer-pack-offline-installer
+
+Ensure below versions for NPM, Node, angular-cli:
+	Node: 16.17.0
+	NPM: 8.15.x
+	Angular-Cli: 14.0.2
+
+Ensure that you have connectivity to the DEV server as following:
+
+	DEV Application Server:
+	192.168.46.198 --> Remote Connection, https://awqaf.dev.isp.elm.sa/
+
+	DEV DB Server:
+	192.168.46.200 --> Port: 1433
+
+	DEV K2 Server (https://de1-saa-wv-bp01/Management/)
+	Add the following record to host.ini:
+		10.33.20.178 de1-saa-wv-bp01
+		
+
+	
